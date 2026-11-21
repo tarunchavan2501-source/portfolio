@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Tarun S Chavan — Computer Engineering student at Dr. D. Y. Patil College of Engineering & Innovation (DYPCOEI), Pune. Portfolio, Projects, Certifications, and academic portfolio of Principal Dr. Suresh Mali Sir." />
+  <meta property="og:title" content="Tarun Chavan | Computer Engineering · DYPCOEI Pune" />
+  <meta property="og:description" content="Portfolio of Tarun Chavan — FinVise AI, Resuora, IoT Safety, and academic tribute to Principal Dr. Suresh Mali Sir & DYPCOEI Pune." />
+  <meta property="og:image" content="assets/tarun_chavan.png" />
+  <title>Tarun Chavan | Computer Engineering · DYPCOEI Pune</title>
+
+  <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CDN Libraries: GSAP, ScrollTrigger, Lenis Smooth Scroll, Lucide Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__brand" data-cursor-expand>
+        <span class="nav__brand-badge">TC</span>
+        <div class="nav__brand-meta">
+          <span class="nav__brand-name">Tarun Chavan</span>
+          <span class="nav__brand-sub">DYPCOEI · Computer Engg</span>
+        </div>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about" class="nav__link" data-cursor-expand>About</a></li>
+        <li><a href="#projects" class="nav__link" data-cursor-expand>Projects</a></li>
+        <li><a href="#certs" class="nav__link" data-cursor-expand>Certificates</a></li>
+        <li><a href="#principal" class="nav__link nav__link--highlight" data-cursor-expand>Dr. Suresh Mali</a></li>
+        <li><a href="#college" class="nav__link" data-cursor-expand>DYPCOEI College</a></li>
+        <li><a href="#ai-sandbox" class="nav__link" data-cursor-expand>AI Lab</a></li>
+        <li><a href="#contact" class="nav__link" data-cursor-expand>Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="https://github.com/tarunchavan2501-source" target="_blank" rel="noopener" class="btn btn--icon" title="GitHub Profile" data-cursor-expand>
+          <i data-lucide="github"></i>
+        </a>
+        <a href="#contact" class="btn btn--primary btn--sm" data-cursor-expand>Let's Connect</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer for Android & iOS -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer__links">
+      <a href="#about" class="mobile-link">About Me</a>
+      <a href="#projects" class="mobile-link">Projects &amp; Live Demos</a>
+      <a href="#certs" class="mobile-link">Internship &amp; Certifications</a>
+      <a href="#principal" class="mobile-link">Principal: Dr. Suresh Mali Sir</a>
+      <a href="#college" class="mobile-link">DYPCOEI College &amp; Faculty</a>
+      <a href="#ai-sandbox" class="mobile-link">AI Architecture Sandbox</a>
+      <a href="#contact" class="mobile-link">Contact Tarun</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <canvas id="heroCanvas" class="hero__canvas"></canvas>
+      <div class="container hero__container">
+        
+        <div class="hero__content">
+          <div class="hero__status">
+            <span class="status-dot"></span>
+            <span class="status-text">B.Tech Computer Engineering '29 · Open to Internships</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="hero__title-line"><span class="hero__reveal">Building Scalable</span></span>
+            <span class="hero__title-line"><span class="hero__reveal hero__reveal--accent">Software Systems &amp;</span></span>
+            <span class="hero__title-line"><span class="hero__reveal">Intelligent GUIs</span></span>
+          </h1>
+
+          <p class="hero__bio">
+            I am <strong>Tarun S Chavan</strong>, a passionate <strong>Computer Engineering</strong> student at <em>Dr. D. Y. Patil College of Engineering and Innovation (DYPCOEI), Varale, Talegaon Dabhade, Pune</em>. Focused on high-performance algorithms, AI/ML pipelines, Python Tkinter GUIs, and embedded IoT architectures.
+          </p>
+
+          <div class="hero__cta-group">
+            <a href="#projects" class="btn btn--primary" data-cursor-expand>
+              <span>Explore My Work</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+            <a href="https://github.com/tarunchavan2501-source" target="_blank" rel="noopener" class="btn btn--secondary" data-cursor-expand>
+              <i data-lucide="github"></i>
+              <span>GitHub Projects</span>
+            </a>
+            <a href="#principal" class="btn btn--outline" data-cursor-expand>
+              <i data-lucide="award"></i>
+              <span>Principal Dr. Mali's Portfolio</span>
+            </a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="8.0">8.0</span>
+              <span class="stat-label">Engineering CGPA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="6">6+</span>
+              <span class="stat-label">Core Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">4</span>
+              <span class="stat-label">Verified Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card-col">
+          <!-- Floating Decorative Badge -->
+          <div class="rotating-badge">
+            <svg viewBox="0 0 100 100" class="rotating-badge__svg">
+              <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+              <text>
+                <textPath href="#circlePath">★ TARUN CHAVAN ★ COMPUTER ENGINEERING ★ DYPCOEI PUNE</textPath>
+              </text>
+            </svg>
+            <div class="rotating-badge__center">
+              <i data-lucide="code-2"></i>
+            </div>
+          </div>
+
+          <!-- 3D Interactive Tilt Showcase Card -->
+          <div class="tilt-card" id="heroTiltCard" data-cursor-expand>
+            <div class="tilt-card__inner">
+              <div class="tilt-card__glow"></div>
+              
+              <div class="tilt-card__photo-wrap">
+                <img src="assets/tarun_photo_1.jpg" alt="Tarun S Chavan - Computer Engineering" class="tilt-card__photo" onerror="this.src='assets/tarun_chavan.png'" />
+                <div class="tilt-card__photo-badge">
+                  <span class="badge-dot"></span> Pune, Maharashtra
+                </div>
+              </div>
+
+              <div class="tilt-card__body">
+                <h3 class="tilt-card__name">Tarun S Chavan</h3>
+                <p class="tilt-card__role">Computer Engineering · Software Specialist</p>
+                <p class="tilt-card__edu">
+                  <i data-lucide="graduation-cap"></i>
+                  Dr. D. Y. Patil College of Engineering &amp; Innovation
+                </p>
+
+                <div class="tilt-card__tags">
+                  <span class="chip">Computer Engg</span>
+                  <span class="chip">Python Expert</span>
+                  <span class="chip">C / C++</span>
+                  <span class="chip">AI / ML</span>
+                  <span class="chip">GUI Dev</span>
+                  <span class="chip">IoT Systems</span>
+                </div>
+
+                <div class="tilt-card__contact-row">
+                  <a href="mailto:tarunsc34@gmail.com" class="tilt-card__icon-link" title="Send Email" data-cursor-expand>
+                    <i data-lucide="mail"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/tarun-chavan-9194b737a" target="_blank" rel="noopener" class="tilt-card__icon-link" title="LinkedIn Profile" data-cursor-expand>
+                    <i data-lucide="linkedin"></i>
+                  </a>
+                  <a href="https://github.com/tarunchavan2501-source" target="_blank" rel="noopener" class="tilt-card__icon-link" title="GitHub Code" data-cursor-expand>
+                    <i data-lucide="github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DISCIPLINES MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>COMPUTER ENGINEERING</span><span class="marquee__star">✦</span>
+        <span>PYTHON 3.12</span><span class="marquee__star">✦</span>
+        <span>MACHINE LEARNING</span><span class="marquee__star">✦</span>
+        <span>C &amp; C++ SYSTEMS</span><span class="marquee__star">✦</span>
+        <span>TENSORFLOW &amp; SCIKIT-LEARN</span><span class="marquee__star">✦</span>
+        <span>DESKTOP GUI (TKINTER)</span><span class="marquee__star">✦</span>
+        <span>FINVISE AI</span><span class="marquee__star">✦</span>
+        <span>RESUORA EVALUATOR</span><span class="marquee__star">✦</span>
+        <span>IOT HARDWARE SENSORS</span><span class="marquee__star">✦</span>
+        <span>CYBERSECURITY FORAGE</span><span class="marquee__star">✦</span>
+        <span>DYPCOEI PUNE</span><span class="marquee__star">✦</span>
+        <!-- Repeated for seamless loop -->
+        <span>COMPUTER ENGINEERING</span><span class="marquee__star">✦</span>
+        <span>PYTHON 3.12</span><span class="marquee__star">✦</span>
+        <span>MACHINE LEARNING</span><span class="marquee__star">✦</span>
+        <span>C &amp; C++ SYSTEMS</span><span class="marquee__star">✦</span>
+        <span>TENSORFLOW &amp; SCIKIT-LEARN</span><span class="marquee__star">✦</span>
+        <span>DESKTOP GUI (TKINTER)</span><span class="marquee__star">✦</span>
+        <span>FINVISE AI</span><span class="marquee__star">✦</span>
+        <span>RESUORA EVALUATOR</span><span class="marquee__star">✦</span>
+        <span>IOT HARDWARE SENSORS</span><span class="marquee__star">✦</span>
+        <span>CYBERSECURITY FORAGE</span><span class="marquee__star">✦</span>
+        <span>DYPCOEI PUNE</span><span class="marquee__star">✦</span>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">Computer Engineering &amp; Applied Innovation</h2>
+          <p class="section-desc">Pursuing B.Tech in Computer Engineering with strong foundations in Data Structures, Algorithms, Systems Architecture, and applied Machine Learning.</p>
+        </div>
+
+        <div class="about__grid">
+          <!-- Tarun Photo Card 2 -->
+          <div class="about__photo-card">
+            <div class="about__photo-wrap">
+              <img src="assets/tarun_photo_2.jpg" alt="Tarun S Chavan - Computer Engineering DYPCOEI" class="about__photo" />
+            </div>
+            <div class="about__photo-caption">
+              <h4>Tarun S Chavan</h4>
+              <p>B.Tech Computer Engineering · DYPCOEI</p>
+            </div>
+          </div>
+
+          <div class="about__details">
+            <div class="about__card about__card--bio">
+              <h3 class="card-title"><i data-lucide="user"></i> Professional Summary</h3>
+              <p>
+                I am <strong>Tarun S Chavan</strong>, an ambitious engineering student in the <strong>Computer Engineering</strong> branch at <strong>Dr. D. Y. Patil College of Engineering and Innovation (DYPCOEI), Varale, Talegaon Dabhade, Pune</strong> (affiliated to Savitribai Phule Pune University).
+              </p>
+              <p>
+                My core academic coursework encompasses <em>Object-Oriented Programming, Data Structures &amp; Algorithms, Operating Systems, Database Management, and Software Engineering methodologies</em>. Alongside my degree, I have honed hands-on proficiency in <strong>C, C++, and Python</strong>, desktop applications via <strong>Python Tkinter</strong>, machine learning with <strong>TensorFlow/scikit-learn</strong>, and automotive IoT hardware safety units.
+              </p>
+              <div class="about__info-list">
+                <div class="info-row"><span class="info-label">Full Name:</span><span class="info-val">Tarun S Chavan</span></div>
+                <div class="info-row"><span class="info-label">Branch:</span><span class="info-val"><strong>Computer Engineering</strong></span></div>
+                <div class="info-row"><span class="info-label">Degree:</span><span class="info-val">B.Tech in Computer Engineering</span></div>
+                <div class="info-row"><span class="info-label">College:</span><span class="info-val">Dr. D. Y. Patil College of Engineering &amp; Innovation (DYPCOEI)</span></div>
+                <div class="info-row"><span class="info-label">Affiliation:</span><span class="info-val">Savitribai Phule Pune University (SPPU)</span></div>
+                <div class="info-row"><span class="info-label">Graduation:</span><span class="info-val">Expected May 2029 (Current CGPA: 8.0)</span></div>
+                <div class="info-row"><span class="info-label">Contact Email:</span><span class="info-val">tarunsc34@gmail.com</span></div>
+                <div class="info-row"><span class="info-label">Location:</span><span class="info-val">Pune, Maharashtra, India</span></div>
+              </div>
+            </div>
+
+            <div class="about__card about__card--skills">
+              <h3 class="card-title"><i data-lucide="cpu"></i> Verified Technical Skills</h3>
+              <div class="skill-bars">
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>Python (Expert)</span><span>95%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 95%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>C &amp; C++ (DSA, Systems)</span><span>92%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 92%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>GUI Engineering (Python Tkinter)</span><span>94%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 94%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>Machine Learning &amp; AI</span><span>90%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 90%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>IoT Sensors &amp; Embedded C</span><span>88%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 88%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__meta"><span>Java, Web (HTML5/CSS3/JS)</span><span>82%</span></div>
+                  <div class="skill-bar__track"><div class="skill-bar__fill" style="--val: 82%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS GALLERY (BENTO GRID WITH REAL REPOS & LIVE LINKS) -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__flex">
+            <div>
+              <span class="section-tag">Featured Portfolio Work</span>
+              <h2 class="section-title">Projects, Codebases &amp; Live Systems</h2>
+            </div>
+            <!-- Filter Controls -->
+            <div class="project-filters" id="projectFilters">
+              <button class="filter-btn active" data-filter="all" data-cursor-expand>All</button>
+              <button class="filter-btn" data-filter="ai" data-cursor-expand>AI &amp; Web</button>
+              <button class="filter-btn" data-filter="systems" data-cursor-expand>Systems (C/C++)</button>
+              <button class="filter-btn" data-filter="iot" data-cursor-expand>IoT &amp; Security</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-grid" id="projectBento">
+
+          <!-- Project 1: FinVise AI -->
+          <article class="bento-card bento-card--large" data-cat="ai" data-cursor-expand>
+            <div class="bento-card__media">
+              <div class="media-preview media-preview--finvise">
+                <div class="code-header">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="title">finvise-ai/src/engine.py</span>
+                </div>
+                <div class="finvise-graphic">
+                  <div class="chart-line"></div>
+                  <div class="pulse-point"></div>
+                  <div class="stock-badge">
+                    <i data-lucide="trending-up"></i> FinVise AI Live Market Intelligence
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">Next.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Finnhub API</span>
+                <span class="tag">LLM Analytics</span>
+              </div>
+              <h3 class="bento-card__title">FinVise AI — Market Intelligence &amp; Stock Analysis</h3>
+              <p class="bento-card__desc">
+                An AI-powered financial and stock analysis platform that streams live ticker data via Finnhub, dynamically parses balance sheets, and leverages LLM integration (Groq/Gemini) to generate plain-English investment summaries and health checks.
+              </p>
+              <div class="bento-card__links">
+                <a href="https://github.com/tarunchavan2501-source/finvise-ai" target="_blank" rel="noopener" class="btn btn--primary btn--sm" data-cursor-expand>
+                  <i data-lucide="github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Resuora -->
+          <article class="bento-card" data-cat="ai" data-cursor-expand>
+            <div class="bento-card__media">
+              <div class="media-preview media-preview--resuora">
+                <div class="score-circle">
+                  <span class="score-val">98</span>
+                  <span class="score-lbl">Judge Score</span>
+                </div>
+                <div class="resume-lines">
+                  <div class="line"></div><div class="line short"></div><div class="line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">Live Web App</span>
+                <span class="tag">Vercel</span>
+                <span class="tag">Resume AI</span>
+              </div>
+              <h3 class="bento-card__title">Resuora — Automated Resume Judge</h3>
+              <p class="bento-card__desc">
+                Intelligent resume evaluation portal with automated scoring rubrics, keyword matching, and live feedback for candidates and recruiters.
+              </p>
+              <div class="bento-card__links">
+                <a href="https://resuora.vercel.app/judge.html" target="_blank" rel="noopener" class="btn btn--outline btn--sm" data-cursor-expand>
+                  <i data-lucide="external-link"></i> Launch Live App
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Chipper Toffee Portfolio -->
+          <article class="bento-card" data-cat="ai" data-cursor-expand>
+            <div class="bento-card__media">
+              <div class="media-preview media-preview--deploy">
+                <div class="badge-pill"><i data-lucide="globe"></i> Netlify Deployment</div>
+                <div class="deploy-url">chipper-toffee-138b1c.netlify.app</div>
+              </div>
+            </div>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">Netlify</span>
+                <span class="tag">Frontend</span>
+                <span class="tag">Live Site</span>
+              </div>
+              <h3 class="bento-card__title">Chipper Toffee — Web Application</h3>
+              <p class="bento-card__desc">
+                Interactive web project deployed on Netlify cloud edge, featuring optimized asset delivery and responsive UI workflows.
+              </p>
+              <div class="bento-card__links">
+                <a href="https://chipper-toffee-138b1c.netlify.app/" target="_blank" rel="noopener" class="btn btn--outline btn--sm" data-cursor-expand>
+                  <i data-lucide="external-link"></i> Visit Live App
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Capstone Hybrid Inventory Manager -->
+          <article class="bento-card" data-cat="systems" data-cursor-expand>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">Capstone May 2026</span>
+                <span class="tag">C / C++</span>
+                <span class="tag">Low-Level I/O</span>
+              </div>
+              <h3 class="bento-card__title">Hybrid Inventory Manager</h3>
+              <p class="bento-card__desc">
+                Comprehensive inventory architecture engineered in C/C++ to synchronize both digital stock and physical warehouses. Features hash-map lookup tables, atomic binary records, and data accuracy pipelines.
+              </p>
+              <ul class="feature-bullets">
+                <li><i data-lucide="check"></i> Dual physical &amp; digital stock management</li>
+                <li><i data-lucide="check"></i> Streamlined manual entry with error checking</li>
+                <li><i data-lucide="check"></i> Fast binary file persistence &amp; reporting</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 5: Chess Logic Engine -->
+          <article class="bento-card" data-cat="systems" data-cursor-expand>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">C++ OOP</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Game State</span>
+              </div>
+              <h3 class="bento-card__title">Chess Engine &amp; Rule Validator</h3>
+              <p class="bento-card__desc">
+                Engineered a complete standalone chess engine in pure C++, verifying full FIDE movement constraints, capturing logic, castling, en passant, checkmate detection, and state trees.
+              </p>
+              <ul class="feature-bullets">
+                <li><i data-lucide="check"></i> Complete 64-square bitwise/matrix logic</li>
+                <li><i data-lucide="check"></i> Comprehensive check &amp; stalemate solver</li>
+                <li><i data-lucide="check"></i> Modular object-oriented architecture</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 6: Car Safety & Security IoT Device -->
+          <article class="bento-card" data-cat="iot" data-cursor-expand>
+            <div class="bento-card__content">
+              <div class="bento-card__tags">
+                <span class="tag tag--accent">IoT Hardware</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Real-Time Alert</span>
+              </div>
+              <h3 class="bento-card__title">Automotive Safety &amp; Security IoT Device</h3>
+              <p class="bento-card__desc">
+                Conceptualized and integrated an automotive IoT hardware unit combining collision proximity sensors, motion triggers, and wireless telemetry modules for instantaneous emergency alert dispatch.
+              </p>
+              <ul class="feature-bullets">
+                <li><i data-lucide="check"></i> Multi-sensor telemetry fusion</li>
+                <li><i data-lucide="check"></i> Microcontroller state-machine firmware</li>
+                <li><i data-lucide="check"></i> Real-time driver notification system</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & INTERNSHIP SECTION (WITH REAL CERTIFICATE EMBEDS) -->
+    <section class="section certs" id="certs">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="section-tag">Credentials &amp; Awards</span>
+          <h2 class="section-title">Verified Internships &amp; National Recognitions</h2>
+          <p class="section-desc">Practical industry programs, corporate job simulations, and competitive achievements.</p>
+        </div>
+
+        <div class="certs-grid">
+
+          <!-- Cert 1: Infosys Springboard -->
+          <div class="cert-card" data-cursor-expand onclick="openCertModal('assets/cert_infosys_springboard.jpg', 'Infosys Springboard Internship Certificate')">
+            <div class="cert-card__img-wrap">
+              <img src="assets/cert_infosys_springboard.jpg" alt="Infosys Springboard Internship Certificate" class="cert-card__img" />
+              <div class="cert-card__overlay"><i data-lucide="maximize-2"></i> View Certificate</div>
+            </div>
+            <div class="cert-card__body">
+              <div class="cert-tag">Internship Completed</div>
+              <h3 class="cert-title">Infosys Springboard Internship</h3>
+              <p class="cert-issuer">Infosys Limited · Issued August 5, 2026</p>
+              <p class="cert-text">
+                Successfully completed the professional course curriculum and internship program under Infosys Springboard, developing foundational enterprise software engineering competencies.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 2: NSPC 2026 Diamond -->
+          <div class="cert-card" data-cursor-expand onclick="openCertModal('assets/cert_nspc.jpg', 'NSPC 2026 Diamond Certificate')">
+            <div class="cert-card__img-wrap">
+              <img src="assets/cert_nspc.jpg" alt="NSPC 2026 Certificate" class="cert-card__img" />
+              <div class="cert-card__overlay"><i data-lucide="maximize-2"></i> View Certificate</div>
+            </div>
+            <div class="cert-card__body">
+              <div class="cert-tag cert-tag--gold">Diamond Level Recognition</div>
+              <h3 class="cert-title">National Student Paryavaran Competition (NSPC 2026)</h3>
+              <p class="cert-issuer">Ministry of Education, Government of India · Issued August 12, 2026</p>
+              <p class="cert-text">
+                Awarded the prestigious Diamond e-certificate for outstanding participation in the nationwide competition organized by the Ministry of Education and partner universities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 3: Infosys Spark -->
+          <div class="cert-card" data-cursor-expand onclick="openCertModal('assets/cert_infosys_spark.jpg', 'Infosys Spark Certificate of Excellence')">
+            <div class="cert-card__img-wrap">
+              <img src="assets/cert_infosys_spark.jpg" alt="Infosys Spark Certificate" class="cert-card__img" />
+              <div class="cert-card__overlay"><i data-lucide="maximize-2"></i> View Certificate</div>
+            </div>
+            <div class="cert-card__body">
+              <div class="cert-tag">Certificate of Excellence</div>
+              <h3 class="cert-title">Infosys Spark Program — Volunteer</h3>
+              <p class="cert-issuer">Infosys Education &amp; Research · Conducted July 23, 2026</p>
+              <p class="cert-text">
+                Recognized for leadership and volunteer contribution to the Spark aspiration program conducted by Infosys Mysore DC and Education &amp; Research heads.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 4: Deloitte Cybersecurity Forage -->
+          <div class="cert-card" data-cursor-expand>
+            <div class="cert-card__badge-icon"><i data-lucide="shield-check"></i></div>
+            <div class="cert-card__body">
+              <div class="cert-tag">Corporate Simulation</div>
+              <h3 class="cert-title">Deloitte Australia — Cyber Security Forage</h3>
+              <p class="cert-issuer">Deloitte Australia · Nov 2025 – Dec 2025</p>
+              <p class="cert-text">
+                Investigated a simulated cybersecurity enterprise breach, analyzed anomalous network logs, applied foundational incident response protocols, and recommended asset safeguarding countermeasures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Villagathon Competition -->
+          <div class="cert-card" data-cursor-expand>
+            <div class="cert-card__badge-icon"><i data-lucide="trophy"></i></div>
+            <div class="cert-card__body">
+              <div class="cert-tag">Competitive Hackathon</div>
+              <h3 class="cert-title">Villagathon Rural Innovation Competition</h3>
+              <p class="cert-issuer">Inter-College Innovation Event</p>
+              <p class="cert-text">
+                Participated in rapid problem-solving hackathon targeted at developing scalable hardware and software interventions for modern rural sustainability challenges.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         SECTION: DEDICATED PORTFOLIO OF PRINCIPAL DR. SURESH MALI SIR
+         Created by Tarun Chavan with link to https://drsureshmali.in
+         ==================================================== -->
+    <section class="section principal-spotlight" id="principal">
+      <div class="container">
+
+        <!-- Creator Tribute Banner -->
+        <div class="creator-tribute-pill">
+          <span class="tribute-badge"><i data-lucide="sparkles"></i> Portfolio Tribute</span>
+          <span class="tribute-text">Academic Portfolio &amp; Research Showcase created with respect by <strong>Tarun Chavan</strong> (Computer Engineering)</span>
+        </div>
+        
+        <div class="principal-banner">
+          <div class="principal-banner__decor"></div>
+          <div class="principal-banner__grid">
+            
+            <div class="principal-banner__profile">
+              <div class="avatar-ring">
+                <div class="avatar-box">
+                  <img src="assets/principal_dr_suresh_mali.png" alt="Dr. Suresh N. Mali" />
+                </div>
+                <div class="avatar-badge">
+                  <i data-lucide="award"></i> 38+ Yrs Exp
+                </div>
+              </div>
+              <div class="principal-banner__names">
+                <span class="role-pill">Principal &amp; Dean of College</span>
+                <h2 class="principal-name">Dr. Suresh N. Mali</h2>
+                <p class="principal-inst">Dr. D. Y. Patil College of Engineering and Innovation (DYPCOEI)</p>
+                <p class="principal-location">Varale, Talegaon Dabhade, Pune – 410507</p>
+
+                <!-- Official Website Links -->
+                <div class="principal-links-group mt-3">
+                  <a href="https://drsureshmali.in" target="_blank" rel="noopener" class="btn btn--primary btn--sm" data-cursor-expand>
+                    <i data-lucide="external-link"></i>
+                    <span>Official Website: drsureshmali.in</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="principal-banner__summary">
+              <h3 class="summary-head">Academic Leadership, Research Pioneer &amp; Dean</h3>
+              <p>
+                <strong>Dr. Suresh N. Mali</strong> is a visionary academician, institutional leader, and research mentor with over <strong>38 years</strong> of extraordinary leadership in engineering education across Maharashtra. As Principal and Dean of DYPCOEI, he has spearheaded academic excellence, university accreditations, and high-impact research. He has formerly served as Principal/Director at Dr. D. Y. Patil Institute of Technology (Pimpri), G. H. Raisoni College of Engineering and Management (Wagholi), and Sinhgad Institute of Technology and Science (Narhe).
+              </p>
+              
+              <div class="research-tags">
+                <span class="res-tag"><i data-lucide="shield"></i> Information Security</span>
+                <span class="res-tag"><i data-lucide="image"></i> Steganography</span>
+                <span class="res-tag"><i data-lucide="file-check"></i> Digital Watermarking</span>
+                <span class="res-tag"><i data-lucide="cpu"></i> Machine Learning</span>
+                <span class="res-tag"><i data-lucide="lock"></i> Privacy-Preserving Data Mining</span>
+              </div>
+
+              <div class="tribute-note-box mt-4">
+                <div class="tribute-note-icon"><i data-lucide="heart"></i></div>
+                <div class="tribute-note-content">
+                  <strong>Portfolio Tribute by Tarun Chavan:</strong>
+                  <p>
+                    <em>"I have designed this dedicated portfolio showcase in honor of our respected Principal, Dr. Suresh Mali Sir, to highlight his prolific research in data hiding, steganography, and his enduring guidance for engineering students."</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Principal Research & Scholarly Details -->
+        <div class="principal-details-grid">
+          
+          <div class="detail-card">
+            <h4 class="detail-card__title"><i data-lucide="book-open"></i> Key Publications &amp; Research Output</h4>
+            <ul class="pub-list">
+              <li>
+                <span class="pub-title">"Robust and secured image-adaptive data hiding"</span>
+                <span class="pub-meta">S. N. Mali, P. M. Patil, R. M. Jalnekar — <em>Digital Signal Processing (Elsevier)</em></span>
+              </li>
+              <li>
+                <span class="pub-title">"Classifier ensemble design for imbalanced data classification: a hybrid approach"</span>
+                <span class="pub-meta">U. R. Salunkhe, S. N. Mali — <em>Procedia Computer Science</em></span>
+              </li>
+              <li>
+                <span class="pub-title">"ROI based embedded watermarking of medical images for secured communication in telemedicine"</span>
+                <span class="pub-meta">B. L. Gunjal, S. N. Mali — <em>Int. Journal of Computer &amp; Communication Eng.</em></span>
+              </li>
+              <li>
+                <span class="pub-title">"Lossless and robust privacy preservation of association rules in data sanitization"</span>
+                <span class="pub-meta">Geeta Navale, Suresh Mali — <em>Cluster Computing (Springer)</em></span>
+              </li>
+              <li>
+                <span class="pub-title">"Analysis of Machine Learning Algorithms for Retrieval of Ontological Knowledge"</span>
+                <span class="pub-meta">Dipak Prakash Pawar, Suresh N. Mali — <em>Lecture Notes in Electrical Engineering</em></span>
+              </li>
+            </ul>
+
+            <div class="mt-4 text-center">
+              <a href="https://drsureshmali.in" target="_blank" rel="noopener" class="btn btn--outline btn--sm" data-cursor-expand>
+                <i data-lucide="globe"></i> Explore More on drsureshmali.in
+              </a>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <h4 class="detail-card__title"><i data-lucide="users"></i> Ph.D. Research Supervision &amp; Guidance</h4>
+            <div class="scholar-grid">
+              <div class="scholar-item">
+                <span class="scholar-name">Dr. Baisa Gunjal (2015)</span>
+                <span class="scholar-topic">Transform Domain Digital Image Watermarking</span>
+              </div>
+              <div class="scholar-item">
+                <span class="scholar-name">Dr. Chaya Gosavi (2017)</span>
+                <span class="scholar-topic">Digital Video Watermarking Techniques</span>
+              </div>
+              <div class="scholar-item">
+                <span class="scholar-name">Dr. Uma Salunkhe (2018)</span>
+                <span class="scholar-topic">Classification Algorithms for Imbalanced Datasets</span>
+              </div>
+              <div class="scholar-item">
+                <span class="scholar-name">Dr. Geeta Navale (2019)</span>
+                <span class="scholar-topic">Privacy Preservation via Reversible Data Hiding</span>
+              </div>
+              <div class="scholar-item">
+                <span class="scholar-name">Dr. Latika Desai (2019)</span>
+                <span class="scholar-topic">Adaptive Data Hiding in FPGA Hardware</span>
+              </div>
+            </div>
+            
+            <div class="quote-box mt-4">
+              <p><em>"Engineering education must bridge foundational analytical rigor with emerging artificial intelligence and creative problem-solving."</em></p>
+              <span>— Dr. Suresh Mali, Principal &amp; Dean, DYPCOEI</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         SECTION: DR. D. Y. PATIL COLLEGE OF ENGINEERING & INNOVATION (DYPCOEI)
+         FOUNDERS, TRUSTEES & KEY FACULTY PORTFOLIOS
+         ==================================================== -->
+    <section class="section college-section" id="college">
+      <div class="container">
+        
+        <div class="section-head text-center">
+          <span class="section-tag">Institutional Legacy</span>
+          <h2 class="section-title">Dr. D. Y. Patil College of Engineering &amp; Innovation</h2>
+          <p class="section-desc">Varale, Talegaon Dabhade, Pune · Approved by AICTE, Recognized by DTE Maharashtra, Affiliated to SPPU (Pune University), NAAC 'A' Accredited.</p>
+        </div>
+
+        <!-- College Metrics -->
+        <div class="college-metrics">
+          <div class="metric-box">
+            <span class="metric-val">2014</span>
+            <span class="metric-lbl">Established</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val">NAAC A</span>
+            <span class="metric-lbl">Accreditation</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val">420+</span>
+            <span class="metric-lbl">Annual Intake</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val">SPPU</span>
+            <span class="metric-lbl">Pune University</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val">₹12 LPA+</span>
+            <span class="metric-lbl">Highest Placement</span>
+          </div>
+        </div>
+
+        <!-- Department Highlights -->
+        <div class="dept-grid">
+          <div class="dept-card dept-card--featured">
+            <div class="dept-card__icon"><i data-lucide="laptop"></i></div>
+            <h4>Computer Engineering (My Branch)</h4>
+            <p>180 Intake · High-performance computing labs, advanced algorithms, distributed systems, full-stack software development.</p>
+          </div>
+          <div class="dept-card">
+            <div class="dept-card__icon"><i data-lucide="brain-circuit"></i></div>
+            <h4>AI &amp; Data Science (AI-DS)</h4>
+            <p>120 Intake · Deep learning systems, predictive data analytics, natural language processing pipelines.</p>
+          </div>
+          <div class="dept-card">
+            <div class="dept-card__icon"><i data-lucide="network"></i></div>
+            <h4>AI &amp; Machine Learning (AIML)</h4>
+            <p>120 Intake · Autonomous systems, computer vision, neural network architectures, edge intelligence.</p>
+          </div>
+          <div class="dept-card">
+            <div class="dept-card__icon"><i data-lucide="sparkles"></i></div>
+            <h4>ANTARANG Annual Fest</h4>
+            <p>Campus Cultural &amp; Sports Extravaganza celebrating state-level innovation, coding marathons, and arts.</p>
+          </div>
+        </div>
+
+        <!-- FOUNDER & TRUSTEES SECTION -->
+        <div class="leadership-block">
+          <h3 class="block-title"><i data-lucide="landmark"></i> Visionary Founder &amp; Trust Leadership (DYPEF)</h3>
+          
+          <div class="trustee-grid">
+            <!-- Founder -->
+            <div class="trustee-card">
+              <div class="trustee-avatar">
+                <img src="assets/founder_dr_dy_patil.jpg" alt="Padmashree Dr. D. Y. Patil" />
+              </div>
+              <div class="trustee-meta">
+                <span class="trustee-role">Visionary Founder</span>
+                <h4 class="trustee-name">Padmashree Dr. D. Y. Patil</h4>
+                <p class="trustee-desc">Former Governor of Bihar &amp; Tripura. Renowned educationist and philanthropist who revolutionized technical, medical, and higher education across India.</p>
+              </div>
+            </div>
+
+            <!-- President -->
+            <div class="trustee-card">
+              <div class="trustee-avatar">
+                <img src="assets/dr_sushant_patil.webp" alt="Dr. Sushant Patil" />
+              </div>
+              <div class="trustee-meta">
+                <span class="trustee-role">President, DYPEF</span>
+                <h4 class="trustee-name">Dr. Sushant Patil</h4>
+                <p class="trustee-desc">Guiding the Dr. D. Y. Patil Educational Federation with modern vision, industry partnerships, and state-of-the-art campus infrastructure expansion.</p>
+              </div>
+            </div>
+
+            <!-- Secretary -->
+            <div class="trustee-card">
+              <div class="trustee-avatar">
+                <img src="assets/dr_anuja_patil.webp" alt="Dr. Anuja Patil" />
+              </div>
+              <div class="trustee-meta">
+                <span class="trustee-role">Secretary, DYPEF</span>
+                <h4 class="trustee-name">Dr. Anuja Patil</h4>
+                <p class="trustee-desc">Spearheading academic quality frameworks, student welfare initiatives, and institutional research incentives across federated colleges.</p>
+              </div>
+            </div>
+
+            <!-- Executive Director -->
+            <div class="trustee-card">
+              <div class="trustee-avatar">
+                <span class="trustee-init">VM</span>
+              </div>
+              <div class="trustee-meta">
+                <span class="trustee-role">Executive Director, DYPEF</span>
+                <h4 class="trustee-name">Mr. Vidyanand Mankar</h4>
+                <p class="trustee-desc">Overseeing administrative operations, campus engineering excellence, industry placement networks, and corporate relations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACADEMIC FACULTY LEADERS -->
+        <div class="leadership-block mt-5">
+          <h3 class="block-title"><i data-lucide="graduation-cap"></i> Distinguished Faculty &amp; Academic Professors</h3>
+
+          <div class="faculty-grid">
+            
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/principal_dr_suresh_mali.png" alt="Dr. Suresh N. Mali" /></div>
+              <h4 class="faculty-name">Dr. Suresh N. Mali</h4>
+              <p class="faculty-role">Principal &amp; Research Dean</p>
+              <p class="faculty-detail">38+ Years Experience · Information Security &amp; Steganography pioneer · Ph.D. Research Guide.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_alpana_adsul.jpg" alt="Dr. Alpana P. Adsul" /></div>
+              <h4 class="faculty-name">Dr. Alpana P. Adsul</h4>
+              <p class="faculty-role">Vice-Principal &amp; HOD Computer Engg</p>
+              <p class="faculty-detail">Leading the Computer Engineering department with curricula tuned to cloud computing, software architecture, and DSA.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_mohan_chimanna.png" alt="Prof. Mohan Chimanna" /></div>
+              <h4 class="faculty-name">Prof. Mohan Chimanna</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Specializing in database management systems, distributed architectures, and object-oriented software engineering.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_santosh_kawade.png" alt="Prof. Santosh Kawade" /></div>
+              <h4 class="faculty-name">Prof. Santosh Kawade</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Expertise in theoretical computer science, operating systems internals, and algorithm design &amp; complexity analysis.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_deepali_sale.png" alt="Prof. Deepali Sale" /></div>
+              <h4 class="faculty-name">Prof. Deepali Sale</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Guiding web technologies, user experience design, software testing methodologies, and agile project execution.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_santosh_darade.png" alt="Prof. Santosh Darade" /></div>
+              <h4 class="faculty-name">Prof. Santosh Darade</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Focused on network protocols, cybersecurity fundamentals, embedded systems, and systems programming in C/C++.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_sharad_jadhav.png" alt="Prof. Sharad Jadhav" /></div>
+              <h4 class="faculty-name">Prof. Sharad Jadhav</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Mentoring student innovations in machine learning applications, predictive analytics, and Python data pipelines.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_nitesh_mali.png" alt="Prof. Nitesh Mali" /></div>
+              <h4 class="faculty-name">Prof. Nitesh Mali</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Active researcher in computer graphics, visual computing, and modern full-stack web architectures.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_tejaswini_mali.png" alt="Prof. Tejaswini Mali" /></div>
+              <h4 class="faculty-name">Prof. Tejaswini Mali</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Specialist in artificial intelligence, neural architectures, data mining, and academic project mentorship.</p>
+            </div>
+
+            <div class="faculty-card">
+              <div class="faculty-avatar"><img src="assets/prof_ganesh_pathak.png" alt="Prof. Ganesh Pathak" /></div>
+              <h4 class="faculty-name">Prof. Ganesh Pathak</h4>
+              <p class="faculty-role">Assistant Professor · Computer Engg</p>
+              <p class="faculty-detail">Guiding laboratory experimentation, cloud infrastructure, containerization, and DevOps toolchains.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE AI LAB / DESIGN BRIEF GENERATOR -->
+    <section class="section ai-sandbox" id="ai-sandbox">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="section-tag">Interactive Feature</span>
+          <h2 class="section-title">AI Creative Brief &amp; Architecture Advisor</h2>
+          <p class="section-desc">Type any brand idea, application concept, or project keyword to generate a complete technology stack, color palette, and development advice.</p>
+        </div>
+
+        <div class="ai-box">
+          <div class="ai-box__input-row">
+            <input type="text" id="aiInput" class="ai-input" placeholder="e.g. AI stock predictor, autonomous drone safety, campus notes hub..." />
+            <button class="btn btn--primary" id="aiGenBtn" data-cursor-expand>
+              <i data-lucide="sparkles"></i> Generate Direction
+            </button>
+          </div>
+
+          <!-- Dynamic Output Container -->
+          <div class="ai-box__result" id="aiResult">
+            <div class="ai-preset-card">
+              <div class="ai-preset-head">
+                <span class="pill-badge">Preset Ready</span>
+                <h4>Enter your concept above or click a suggestion:</h4>
+              </div>
+              <div class="quick-tags">
+                <button class="quick-btn" onclick="quickFill('Autonomous Drone Safety IoT')">Drone IoT Safety</button>
+                <button class="quick-btn" onclick="quickFill('AI Financial Analytics Platform')">Financial AI App</button>
+                <button class="quick-btn" onclick="quickFill('College Placement Management Portal')">Placement Portal</button>
+                <button class="quick-btn" onclick="quickFill('Steganographic Secure File Vault')">Steganography Vault</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+          <p class="section-desc">Open for internships, technical projects, software development roles, and research opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <div class="contact-info">
+            <h3 class="contact-title">Direct Channels</h3>
+            
+            <a href="mailto:tarunsc34@gmail.com" class="contact-item" data-cursor-expand>
+              <div class="contact-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="label">Email Address</span>
+                <span class="val">tarunsc34@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/tarun-chavan-9194b737a" target="_blank" rel="noopener" class="contact-item" data-cursor-expand>
+              <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+              <div>
+                <span class="label">LinkedIn Profile</span>
+                <span class="val">linkedin.com/in/tarun-chavan-9194b737a</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/tarunchavan2501-source" target="_blank" rel="noopener" class="contact-item" data-cursor-expand>
+              <div class="contact-icon"><i data-lucide="github"></i></div>
+              <div>
+                <span class="label">GitHub Code</span>
+                <span class="val">github.com/tarunchavan2501-source</span>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span class="label">College Campus</span>
+                <span class="val">DYPCOEI, Varale, Talegaon Dabhade, Pune 410507</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web3Forms Powered Contact Form -->
+          <form class="contact-form" id="contactForm">
+            <!-- Hidden Access Key field (can be replaced with user's key) -->
+            <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Portfolio Message for Tarun Chavan (Computer Engineering)" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Hello Tarun, I came across your portfolio and would like to discuss an opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" id="formSubmitBtn" data-cursor-expand>
+              <i data-lucide="send"></i>
+              <span id="btnText">Send Direct Message</span>
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Certificate Modal Lightbox -->
+  <div class="modal" id="certModal" aria-hidden="true">
+    <div class="modal__overlay" onclick="closeCertModal()"></div>
+    <div class="modal__content">
+      <button class="modal__close" onclick="closeCertModal()"><i data-lucide="x"></i></button>
+      <h3 id="modalTitle" class="modal__title">Certificate</h3>
+      <div class="modal__image-wrapper">
+        <img id="modalImg" src="" alt="Certificate" class="modal__img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <span class="footer__brand">Tarun S Chavan</span>
+        <p class="footer__sub">B.Tech in Computer Engineering · Dr. D. Y. Patil College of Engineering &amp; Innovation, Pune</p>
+      </div>
+
+      <div class="footer__socials">
+        <a href="https://github.com/tarunchavan2501-source" target="_blank" rel="noopener" title="GitHub" data-cursor-expand><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/tarun-chavan-9194b737a" target="_blank" rel="noopener" title="LinkedIn" data-cursor-expand><i data-lucide="linkedin"></i></a>
+        <a href="mailto:tarunsc34@gmail.com" title="Email" data-cursor-expand><i data-lucide="mail"></i></a>
+        <a href="https://drsureshmali.in" target="_blank" rel="noopener" title="Principal Dr. Suresh Mali Official Site" data-cursor-expand><i data-lucide="award"></i></a>
+      </div>
+    </div>
+    <div class="footer__bottom text-center">
+      <p>© 2026 Tarun Chavan (Computer Engineering). Engineered with pure HTML5, CSS3 &amp; Vanilla JS. Academic Tribute to Principal Dr. Suresh Mali Sir &amp; DYPCOEI Pune.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
